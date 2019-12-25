@@ -1,0 +1,15 @@
+.home-page {
+    .left-side-bar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 25%;
+        height: 100%;
+        background: #070D59;
+
+        .upload-file {
+            position: absolute;
+            bottom: 10%;
+        }
+    }
+}
