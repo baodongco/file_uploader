@@ -4,14 +4,14 @@ import 'font-awesome/css/font-awesome.min.css';
 
 class Button extends Component {
     constructor() {
-        super()
+        super();
 
         this.state = {
             files: []
-        }
+        };
     }
 
-    triggerInputFile = () => this.fileInput.click()
+    triggerInputFile = () => this.fileInput.click();
 
     onChange = (e) => {
         const files = e.target.files;

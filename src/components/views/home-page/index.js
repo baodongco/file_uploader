@@ -11,23 +11,27 @@ class HomePage extends Component {
         this.state = {
             arrFiles: [],
             currentFile: null
-        }
+        };
     }
 
     handleUpload = (e) => {
         const filesArr = Array.from(e.target.files);
 
         const arrFiles = filesArr.map((file) => {
-            console.log('test: ', file)
-            const src = window.URL.createObjectURL(file)
-            return { name: file.name, file, id: this.guidGenerator(), src, type: file.type.split('/')[1] }
+            const src = window.URL.createObjectURL(file);
+            let type = file.type.split('/')[1];
+            if (type === 'vnd.openxmlformats-officedocument.wordprocessingml.document') {
+                type = 'docx';
+            }
+
+            return { name: file.name, file, id: this.guidGenerator(), src, type: type };
         })
 
         this.setState({ arrFiles: [...this.state.arrFiles, ...arrFiles] });
         if (!this.state.currentFile) {
             this.setState({
                 currentFile: this.state.arrFiles[0] ? this.state.arrFiles[0] : null
-            })
+            });
         }
     }
 
@@ -36,7 +40,7 @@ class HomePage extends Component {
             currentFile: this.state.arrFiles.find(file => {
                 return file.id === id
             })
-        })
+        });
     }
 
     guidGenerator = () => {
@@ -50,7 +54,7 @@ class HomePage extends Component {
         if (!this.state.currentFile && this.state.arrFiles.length > 0) {
             this.setState({
                 currentFile: this.state.arrFiles[0] ? this.state.arrFiles[0] : null
-            })
+            });
         }
     }
 

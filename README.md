@@ -1,5 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### File types supoorted
+Images: png, jpeg, gif, bmp, including 360-degree images
+pdf
+csv
+xslx
+docx
+Video: mp4, webm
+Audio: mp3
+
 ## Available Scripts
 
 In the project directory, you can run:

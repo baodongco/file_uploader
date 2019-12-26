@@ -3,14 +3,6 @@ import './left-side-bar.scss';
 import Logo from '../../../logo.svg'
 
 class LeftSideBar extends Component {
-    constructor() {
-        super()
-
-        this.state = {
-            fileList: [],
-            selectedFile: null
-        }
-    }
 
     render() {
         let itemsRender = this.props.fileList.map((file) => {
