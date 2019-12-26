@@ -1,0 +1,38 @@
+.home-page {
+    text-align: left;
+    display: flex;
+
+    &--content {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        vertical-align: top;
+        text-align: left;
+        padding: 80px;
+        &--title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            
+            svg {
+                margin-right: 25px;
+            }
+        }
+
+        &--display {
+            .pg-viewer-wrapper {
+                overflow-y: auto;
+            }
+            #pg-photo-container {
+                width: 100%!important;
+                height: auto!important;
+
+                img {
+                    width: 100%!important;
+                    height: auto!important;
+                    max-height: 100vh;
+                }
+            }
+        }
+    }
+}
