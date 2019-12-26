@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### File types supoorted
+### File types supported
 Images: png, jpeg, gif, bmp, including 360-degree images
 pdf
 csv
